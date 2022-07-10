@@ -2,7 +2,7 @@ image: ghcr.io/sushrut1101/docker:latest
 
 test:
     stage: test
-    timeout: 2 hours
+    timeout: 1 month
     script:
       - nproc
       - neofetch
