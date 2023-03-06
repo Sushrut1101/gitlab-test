@@ -1,10 +1,13 @@
 image: ghcr.io/sushrut1101/docker:latest
 
 test:
-    stage: test
     timeout: 1 month
     script:
-      - nproc
-      - neofetch
-      - df -h
-      - speedtest
+        - nproc
+        - nproc --all
+        - neofetch || uname -a && uptime
+        - df -h
+        - lsblk
+        - ls /dev
+        - ls /dev/*/ || true
+        - speedtest || true
